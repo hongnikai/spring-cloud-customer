@@ -6,6 +6,7 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+@SuppressWarnings("all")
 public class Rev1 {
 
     private static final String EXCHANGE_NAME="test_exchange_topic";

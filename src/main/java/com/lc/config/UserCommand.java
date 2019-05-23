@@ -3,7 +3,6 @@ package com.lc.config;
 import com.lc.entity.User;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
-import com.netflix.hystrix.HystrixThreadPoolKey;
 import org.springframework.web.client.RestTemplate;
 
 public class UserCommand extends HystrixCommand<User> {
@@ -29,12 +28,14 @@ public class UserCommand extends HystrixCommand<User> {
     }
 
 
-    @Override
-    protected User getFallback() {
-        Throwable executionException = getExecutionException();
-        System.out.println(executionException.getMessage());
-        return new User(11111,"xinsheng");
-    }
+//    @Override
+//    protected User getFallback() {
+//        Throwable executionException = getExecutionException();
+//        System.out.println(executionException.getMessage());
+//        return new User("11111","xinsheng");
+//
+//
+//    }
 
 
 

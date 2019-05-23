@@ -1,5 +1,6 @@
 package com;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -27,12 +28,12 @@ import java.util.List;
 @EnableFeignClients     //启用feign进行远程调用
 @EnableDiscoveryClient  //启用服务注册与发现
 @SpringBootApplication
+@MapperScan("com.lc.dao")
 public class CustomerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CustomerApplication.class, args);
     }
-
 
     @LoadBalanced
     @Bean

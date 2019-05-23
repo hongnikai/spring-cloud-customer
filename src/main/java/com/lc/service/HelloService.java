@@ -23,6 +23,7 @@ public class HelloService {
 
     public String error() {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://spring-cloud-provider/hello", String.class);
+        System.out.println("执行熔断器方法");
         return responseEntity.getBody();
     }
 

@@ -5,9 +5,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+
+/**
+ *  使用redisSession 时使其生效
+ */
 //使用WebMvcConfigurerAdapter 可以拓展springMVC的功能
 //@EnableWebMvc   //使springboot默认配置的mvc 失效
-@Configuration
+//@Configuration
 public class MyMvcConfig2 extends WebMvcConfigurerAdapter {
 
     @Override

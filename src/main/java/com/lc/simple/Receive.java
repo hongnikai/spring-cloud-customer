@@ -12,6 +12,7 @@ import java.util.concurrent.TimeoutException;
 * 消费者  获取消息
 *
 * */
+//@SuppressWarnings("all")
 public class Receive {
 
     //测试普通队列

@@ -2,25 +2,19 @@ package com.lc.controller;
 
 import com.lc.config.UserCommand;
 import com.lc.dao.ProviderDao;
-import com.lc.entity.Book;
 import com.lc.entity.User;
 import com.lc.service.HelloService;
-import com.netflix.hystrix.Hystrix;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixCommandKey;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
